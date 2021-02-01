@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.grid-wrapper{
+  margin: 0;
+  width: 100%;
+}
+
+.set-grid{
+  margin:0 auto;
+  display:grid;
+  grid-template-rows: auto;
+  column-gap: 32px;
+}
+.break{
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+.break::before{
+  content: "20";
+}
+section{
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FF00C4;
+}
+
+.padding-col{
+  padding-left: 32px;
+}
+.fake-story{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 34px);
+  column-gap: 32px;
+  width: 100%;
+  min-width: 34px;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: lightslategray;
+  height: 100%;
+  min-height: 110px;
+}
+.col{
+  width: 34px;
+  margin-right: 32px;
+  border-style: dashed;
+  border-width: 1px;
+  border-color: lightslategray;
+  height: 100%; 
+  min-height: 110px;  
+}
+.area-a{
+  grid-area: a;
+  background-color: lightgreen;
+}
+.area-b{
+  grid-area: b;
+  background-color: lightpink;
+}
+.area-c{
+  grid-area: c;
+  background-color: lightskyblue;
+}
+.area-d{
+  grid-area: d;
+  background-color:wheat;
+}
+
+
+@media only screen and (max-width: 1399px) {
+  /* 16u grid */
+  .break::before{
+      content: "16";
+  }
+}
+
+@media only screen and (max-width: 1149px) {
+  /* 12u grid */
+  .break::before{
+      content: "12";
+  }
+}
+
+@media only screen and (max-width: 899px) {
+  /* 10u grid */
+  .break::before{
+      content: "10";
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* Full width items */
+  .flex-a{
+      flex-direction: column;
+  }
+  .flex-b{
+      flex-direction: column;
+  }
+  .flex-c{
+      flex-direction: column;
+  }
+  .flex-d{
+      flex-direction: column;
+  }
+  .break::before{
+      content: "full-width";
+  }
+}
